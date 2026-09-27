@@ -1,16 +1,30 @@
-# React + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicație realizată cu React și Vite pentru gestionarea unei liste de sarcini.
 
-Currently, two official plugins are available:
+## Structura proiectului
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Care este rolul folderului `src`?
 
-## React Compiler
+Folderul `src` conține codul sursă al aplicației: componentele React, stilurile CSS, imaginile și celelalte fișiere folosite pentru construirea interfeței.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Ce reprezintă fișierul `App.jsx`?
 
-## Expanding the Oxlint configuration
+`App.jsx` definește componenta principală a aplicației. Aceasta organizează interfața și va gestiona lista de sarcini și acțiunile efectuate asupra lor.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 3. Ce informații sunt păstrate în `package.json`?
+
+Fișierul `package.json` păstrează informații despre proiect, scripturile npm disponibile și dependențele necesare, precum React și Vite.
+
+### 4. Ce reprezintă folderul `node_modules`?
+
+Folderul `node_modules` conține pachetele instalate prin npm și dependențele lor. Este generat prin comanda `npm install` și nu se publică în repository-ul Git.
+
+## Comenzi disponibile
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run lint
+```
