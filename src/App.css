@@ -13,9 +13,12 @@ h1 {
   text-align: center;
 }
 
-.task-count {
-  margin: 0.75rem 0 0;
-  text-align: center;
+.task-summary {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+  color: #475569;
 }
 
 .task-form {
@@ -49,6 +52,30 @@ button:disabled {
   opacity: 0.5;
 }
 
+button:not(:disabled):hover {
+  background: #1d4ed8;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.filters button {
+  padding: 0.55rem 0.9rem;
+  color: #334155;
+  font-weight: 600;
+  background: #e2e8f0;
+}
+
+.filters button:hover,
+.filters button.active {
+  color: #ffffff;
+  background: #2563eb;
+}
+
 .task-list {
   display: grid;
   gap: 0.75rem;
@@ -58,6 +85,10 @@ button:disabled {
 }
 
 .task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 1rem;
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -68,11 +99,33 @@ button:disabled {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-width: 0;
+  cursor: pointer;
 }
 
 .task-item input {
+  flex: 0 0 auto;
   width: 1.15rem;
   height: 1.15rem;
+}
+
+.task-item span {
+  overflow-wrap: anywhere;
+}
+
+.task-item.completed span {
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  flex: 0 0 auto;
+  padding: 0.55rem 0.8rem;
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c !important;
 }
 
 .empty-message {
@@ -96,5 +149,15 @@ button:disabled {
 @media (max-width: 520px) {
   .task-form {
     flex-direction: column;
+  }
+
+  .task-summary {
+    align-items: center;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .filters {
+    flex-wrap: wrap;
   }
 }

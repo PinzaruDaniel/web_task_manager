@@ -2,6 +2,15 @@
 
 Aplicație realizată cu React și Vite pentru gestionarea unei liste de sarcini.
 
+## Funcționalități
+
+- adăugarea unei sarcini;
+- afișarea tuturor sarcinilor;
+- marcarea unei sarcini ca finalizată;
+- ștergerea unei sarcini;
+- afișarea numărului total și a numărului de sarcini finalizate;
+- filtrarea sarcinilor: toate, active sau finalizate.
+
 ## Structura proiectului
 
 ### 1. Care este rolul folderului `src`?
