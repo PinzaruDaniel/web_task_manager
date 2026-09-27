@@ -49,6 +49,38 @@ button:disabled {
   opacity: 0.5;
 }
 
+.task-list {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  list-style: none;
+}
+
+.task-item {
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+}
+
+.task-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.task-item input {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.empty-message {
+  margin: 2rem 0 0;
+  color: #64748b;
+  text-align: center;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
